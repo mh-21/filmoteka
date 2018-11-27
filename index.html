@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Filmoteka</title>
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/dist/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/lib/jquery.min.js"></script>
+</head>
+
+<body>
+
+<header>
+<div class="flex fixed-menu">
+	<div class="logo"><a href="#">Films library</a></div>
+	<div class="addFilm"><a href="#" id="addvideo"><i class="fa fa-plus-circle" aria-hidden="true"></i></a><span>Add new film</span><!-- fa-times-circle  -x --></div>
+</div>
+</header>
+
+<main>
+<!-- FORM ADDING NEW FILM-->
+<section class="inner-content formAdd" style="display: none;">
+	<div class="container">
+	<div class="fixed">
+<form id="formAddFilm">
+  <label for="title">title</label>
+  <input type="text" name="title" id="title" value="Martian" autocomplete="on">
+  <label for="year">year</label>
+  <input type="num" name="year" id="year" value="2016" autocomplete="on" >
+  <label for="country">country</label>
+  <input type="text" name="country" id="country" value="Ukraine" autocomplete="on" >
+  <label for="genre">genre</label>
+  <input type="text" name="genre" id="genre" value="Comedy" autocomplete="on" >
+  <label for="poster">poster (link)</label>
+  <input type="text" name="poster" id="poster" value="https://assets.mubi.com/images/notebook/post_images/22267/images-w1400.jpg" >
+  <label for="other">description</label>
+  <textarea id="description" name="description" cols="10" rows="5" placeholder="Some description..."></textarea>
+  <button class="btn btn-danger">Cancel</button>
+<button  id="sendDescrtiption" class="btn btn-primary">Add</button>
+</form>
+</div>
+	</div>
+</section>
+
+
+<!-- EXample film-block-->
+<section class="inner-content">
+     <div class="bgimage"><img src="img/film.jpg"></div>
+<div class="film-description">
+	<div><img src="img/film.jpg"></div>
+	<div class="about">
+		<h2>Martian</h2>
+		<p>Mars mission Ares-2 in the process was forced to urgently leave the planet because of the impending sandstorm. Engineer and Biolog mark Watney suffered an injury suit during a sand storm. The mission,considering him dead...</p>
+		<div class="info">
+		<table>
+  <tr>
+    <td>Country</td>
+    <td>USA</td>
+  </tr>
+  <tr>
+    <td>Year</td>
+    <td>2016</td>
+  </tr>
+    <tr>
+    <td>Genre</td>
+    <td>Fantasy</td>
+  </tr>
+    <tr>
+    <td>Actors</td>
+    <td>Aksel Hennie, Chiwetel Ejiofor, Jeff Daniels, Jessica Chastain, Kate Mara, Kristen Wiig, Matt Damon, Michael Peña, Sean Bean, Sebastian Stan</td>
+  </tr>
+</table>
+</div>
+	<div class="btn-down">
+		<button class="btn btn-danger" id="deleteBtn">Delete</button>
+		<button class="btn btn-primary" id="editBtn">Edit</button>
+		</div>
+	</div>
+</div>
+<div class="dropdown">
+  <a class="dropdown" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Comments: 3 <i class="fa fa-chevron-up"></i> 
+  </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+  <p>Test Comment 1</p>
+  <p>Test Comment 2</p>
+  <textarea  rows="3" placeholder="Add your comment...">
+  </textarea>
+ <button class="btn btn-primary" id="addComment">Add</button>
+  </div>
+</div>
+</section>
+</main> 
+
+
+<!-- Modal window - "Confirm fil, DELETE-->
+	<div class="modal fade" id="modalConfirm" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					Are you sure???
+				</div>
+
+				<div class="modal-footer">
+					<button class="btn btn-danger" data-dismiss="modal">Cancel</button>
+					<button class="btn btn-success" id="btnConfirm">Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- Modal window - "EDIT FILM DESCRIPTION-->
+	<div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+<form id="formEdit">
+  <label for="title">title</label>
+  <input type="text" name="title" id="title" >
+  <label for="year">year</label>
+  <input type="num" name="year" id="year">
+  <label for="country">country</label>
+  <input type="text" name="country" id="country">
+  <label for="genre">genre</label>
+  <input type="text" name="genre" id="genre">
+  <label for="poster">poster (link)</label>
+  <input type="text" name="poster" id="poster">
+  <label for="other">description</label>
+  <textarea id="description" name="description" cols="10" rows="5"></textarea>
+</form>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-danger" data-dismiss="modal">Cancel</button>
+					<button class="btn btn-success" id="btnConfirmEdit">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+ <script src="js/lib/popper.min.js" ></script>
+<script src="js/lib/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

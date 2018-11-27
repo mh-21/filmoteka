@@ -1,0 +1,324 @@
+@import "fonts.css";
+$primary_bgcolor: #e4edf4;
+$primary_red: #ff7e70;
+$primary_blue: #6fcdff;
+$primary_violet: #a986b4;
+
+html {
+	font-size: 10px;
+}
+body {
+	background: $primary_bgcolor;
+	font-size: 1.6rem;
+	width: 100%;
+	margin: 0 auto;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+a {
+	text-decoration: none;
+	color: #fff;
+}
+a:hover {
+text-decoration:none;
+}
+* {
+	box-sizing: border-box;
+}
+.formAdd {
+display: none;
+}
+button.btn {
+	font-family: Open-Sans;
+	font-size: 1.4rem;
+	width: 140px;
+	height: 40px;
+	border-radius: 25px;
+	margin-right: 15px;
+}
+button.btn-danger {
+	background: $primary_red;
+	border: 1px solid $primary_red;
+	box-shadow: 0 3px 10px rgba(255,126,112,1);
+}
+button.btn-primary {
+	background: $primary_blue;
+	border: 1px solid $primary_blue;
+	box-shadow: 0 3px 10px rgba(110,205,253,1);
+}
+
+.inner-content {
+	width: 100%;
+	max-width: 1171px;
+	margin: 0 auto;
+	margin-top: 55px;
+}
+
+.fixed-menu {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: $primary_blue;
+	color: #fff;
+	z-index: 5;
+}
+header {
+display: block;
+height: 136px;
+}
+
+header .fixed-menu i {
+	font-size: 3.4rem;
+	border-radius: 50%;
+}
+header .addFilm span {
+	padding-top: 60px;
+	padding-left: 150px;
+	font-size: 1.6rem;
+}
+header .addFilm a {
+    position: absolute;
+    top: 40%;
+    margin-left: 100px;
+    transition: color 1s, transform 1s;
+}
+header .addFilm a:hover {
+color: $primary_red;
+transform: scale(1.7);
+}
+header .logo a {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+	font-size: 3.6rem;
+	font-family: Open-Sans;
+    transition: color 2s;
+}
+header .logo a:hover {
+color: #000;
+
+}
+.flex {
+	display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+}
+.addFilm {
+    display: flex;
+	height: 136px;
+	background: $primary_blue;
+    width: 100%;
+    max-width: 1171px;
+    margin: 0 auto;
+}
+.logo {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    z-index: -5;
+    height: 136px;
+    background: #51afe1; 
+}
+
+section {
+	position: relative;
+	background: #fff;
+	min-height: 700px;
+	border-radius: 25px;
+	overflow: hidden;
+}
+.comment {
+	position: absolute;
+	bottom: 0;
+	left: 100px;
+	width: 100%;
+	height: 95px;
+	background: #fff;
+	color: $primary_red;
+	border-style: none;
+}
+.film-description {
+	font-family: Montserrat;
+	font-size: 1.6rem;
+	position: absolute;
+	z-index: 150;
+	display: flex;
+	height: 605px;
+	padding: 80px 100px 80px 100px;
+	color: #fff;
+}
+.bgimage img {
+    width: 100%;
+    filter: blur(20px);
+
+}
+.bgimage {
+	position: absolute;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+	height: 605px;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	overflow: hidden;   
+}
+.bgimage::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+}
+.film-description img {
+	max-width: 310px;
+	max-height: 440px;
+	border-radius: 15px;
+	margin-right: 50px;
+}
+.about {
+
+}
+table {
+	margin-bottom: 50px;
+}
+table td:nth-child(1) {
+	padding-right: 90px;
+    text-align: left;
+    vertical-align: top;
+}
+section h2 {
+	padding-bottom: 15px;
+	font-size: 3.6rem;
+	font-weight: 800;
+}
+.btn-down {
+	position: absolute;
+	bottom: 100px;
+}
+.collapse {
+	display: block;
+	position: relative;
+	top: 400px;
+	right: 0;
+	z-index: 200;
+}
+.dropdown {
+	position: absolute;
+    bottom: 0;
+    left: 0;
+	z-index: 300;
+	background: #fff;
+	width: 100%;
+	height: 100px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.dropdown-toggle {
+    padding-left: 100px;
+	color: $primary_red;
+}
+.dropdown {
+    padding: 40px 0 0 100px;
+    color: $primary_red;
+    display: flex;
+}
+.dropdown-menu {
+    position: relative;
+    bottom: 25px;
+    left: -100px;
+    width: 1171px;
+    padding-left: 100px;
+    border-style: none;
+    margin-left: 0; 
+    border-radius: 25px;
+}
+.dropdown-menu p{
+    font-family: Montserrat;
+    font-size: 1.6rem;
+    padding: 20px 0 0 0;
+}
+.dropdown-item {
+	overflow: visible;
+	z-index: 5888;
+}
+textarea {
+    resize: none;
+    margin-top: 20px;
+    width: 90%;
+}
+.dropdown .btn {
+    margin-bottom: 25px;
+}
+.fa-chevron-up {
+   font-size: 1rem;
+   margin-left: 5px;
+   margin-top: 5px;
+}
+.fa-chevron-down {
+   font-size: 1rem;
+   margin-left: 5px;
+   margin-top: 5px;
+}
+.dropdown p::before {
+    content: '';
+    display: block;
+    margin-bottom: 20px;
+    height: 2px;
+    width: 90%;
+    background: #e4edf4;
+}
+.dropdown p:nth-last-of-type(1)::after {
+    content: '';
+    display: block;
+    margin-top: 20px;
+    height: 2px;
+    width: 90%;
+    background: #e4edf4;
+}
+.dropdown button {
+    margin-top: 20px;
+}
+section form {
+    padding-top: 136px;
+    padding-bottom: 30px;
+    padding-left: 80px;
+}
+label {
+    display: block;
+    padding-top: 5px;
+
+}
+.fixed {
+    width: 500px;
+    font-family: Montserrat;
+    text-transform: uppercase;
+}
+.fixed input{
+    width: 500px;
+    height: 50px;
+    border-radius: 5px;
+}
+.fixed textarea{
+    width: 500px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+.formAdd {
+    margin-top: -136px;
+}
+
+
+
+@media screen and (min-width:320px) and (max-width:800px) {
+.film-description {
+    padding: 40px 5px 40px 5px;
+}
+
+}
