@@ -72,7 +72,7 @@ height: 136px;
 }
 
 header .fixed-menu i {
-	font-size: 3.4rem;
+	font-size: 3.5rem;
 	border-radius: 50%;
 }
 header .addFilm span {
@@ -321,4 +321,24 @@ label {
     padding: 40px 5px 40px 5px;
 }
 
+}
+@media (max-width:1800px) {
+header .logo a {
+    top: 7vh;
+    left: 1vh;
+	font-size: 2.6rem;
+}
+}
+@media (max-width:1500px) {
+header .logo a {
+    top: 7vh;
+    left: 1vh;
+	font-size: 1.6rem;
+}
+}
+
+@media (max-width:1500px) { 
+.logo {
+	display: none;
+}
 }
